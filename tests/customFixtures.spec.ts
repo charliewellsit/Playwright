@@ -18,7 +18,6 @@ type MyFixtures = {
 const test = base.extend<MyFixtures>({
   testData: async ({}, use) => {
     // 'testData' is the name of our fixture
-    // async function provides the fixture value to the test
 
     const data = { email: "test@example.com", password: "password123" };
     // This is the data our fixture will provide
