@@ -1,12 +1,5 @@
-import {test as base, expect} from '@playwright/test';
-import {LoginPage} from './pageObjects/reuse-login-page.pom.ts';
-
-const test = base.extend<{loginPage: LoginPage}>({
-    loginPage: async ({page}, use) => {
-        const loginPage = new LoginPage(page);
-        await use(loginPage);
-    }
-});
+import { test, expect } from './pageObjects/pageFixtures.ts';
+// Import the custom test and expect from pageFixtures.ts, which includes the LoginPage fixture.
 
 test('should login using POM', async ({page, loginPage}) => {
     await page.goto('https://binaryville.com/account/');
