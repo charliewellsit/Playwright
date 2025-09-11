@@ -1,0 +1,5 @@
+{
+    "default":["steps/**/*.ts"],
+    "paths":["features/**/*.feature"],
+    "requireModule":["ts-node/register"]
+}
