@@ -1,18 +1,6 @@
-import {Given, When, Then, Before, After} from '@cucumber/cucumber';
-import{ chromium, expect, Browser, Page } from '@playwright/test';
-
-let page: Page;
-let browser: Browser;
-
-Before(async () => {
-    browser = await chromium.launch({ headless: false });
-    const context = await browser.newContext();
-    page = await context.newPage();
-})
-
-After(async () => {
-    await browser.close();
-})
+import {Given, When, Then} from '@cucumber/cucumber';
+import{ expect } from '@playwright/test';
+import { page } from './browserSetup';
 
 Given('the user is on the login page', async () => {
     await page.goto('https://binaryville.com/account/'); // Replace with actual login URL
