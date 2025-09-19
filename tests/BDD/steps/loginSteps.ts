@@ -3,7 +3,7 @@ import{ expect } from '@playwright/test';
 import { page } from './browserSetup';
 
 Given('the user is on the login page', async () => {
-    await page.goto('https://binaryville.com/account/'); // Replace with actual login URL
+    await page.goto('https://binaryville.com/account/');
 });
 
 When('the user enters valid credentials', async () => {
